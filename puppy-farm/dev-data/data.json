@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "dogBreed": "Bulldog",
+    "image": "https://en.wikipedia.org/wiki/Bulldog#/media/File:Bulldog_adult_male.jpg",
+    "origin": "England",
+    "otherNames": "English Bulldog, British Bulldog",
+    "temperament": "Equable and kind, resolut, and courageous",
+    "demeanor": "pacifist and dignified",
+    "familyDog": true,
+    "cost": "$800",
+    "description": "The Bulldog is of medium size, a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose."
+  },
+  {
+    "id": 1,
+    "dogBreed": "German Shepherd",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg",
+    "origin": "Germany",
+    "otherNames": "Alsatian wolf-dog, Berger Allemand, Deutscher, Schäferhund, Altdeutsche, Schäferhunde",
+    "temperament": "Self assured and moderately active, German Shepherds are willing to learn and eager to have a purpose. They're curious, can become over protective. Highly intelligent and obedient.",
+    "demeanor": "aloof but not usually aggressive",
+    "familyDog": true,
+    "cost": "$1000",
+    "description": "A working dog of medium to large size. The German Shepherd was originally bred as a herding dog, for herding sheep. They've since been used in many types of work including disability assistance, search-and-rescure, police work, and warfare."
+  },
+  {
+    "id": 2,
+    "dogBreed": "Labrador Retriever",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Labrador_on_Quantock_%282175262184%29.jpg",
+    "origin": "United Kingdom Canada",
+    "otherNames": "Labrador, Lab",
+    "temperament": "Kind, pleasant, outgoing, and tractable in nature. Labradors ahve a reputation as a very even-tempered breed and excellent family dog.",
+    "demeanor": "sweet-natured, enthusiastic, and loyal",
+    "familyDog": true,
+    "cost": "$1000",
+    "description": "The Labrador is loyal, obedient, and playful. It was bred as a sporting and hunting dog, but is widely kept as a companion dog. It can also be trained as a guide or assistance dog, or for rescue or therapy work."
+  },
+  {
+    "id": 3,
+    "dogBreed": "Australian Shepherd",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/80/Australian_Shepherd_red_bi.JPG",
+    "origin": "United States",
+    "otherNames": "none",
+    "temperament": "Intelligent, active, loyal, protective, playful, and adaptive.",
+    "demeanor": "highly intelligent and easy to train",
+    "familyDog": true,
+    "cost": "$650 - $850",
+    "description": "The Australian Shepherd is a medium-sized, athletic breed. Typically standing between 18 and 23 inches and weighing in at 35 to 70 pounds."
+  },
+  {
+    "id": 4,
+    "dogBreed": "Alaskan Malamute",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Alaskan_Malamute.jpg",
+    "origin": "Alaska",
+    "otherNames": "Mala or Maly",
+    "temperament": "Very fond of people, sought after family dogs, but unreliable watchdogs (they don't tend to bark), nimble around furniture and smaller items, need plenty of time outdoors.",
+    "demeanor": "loyal and bold",
+    "familyDog": true,
+    "cost": "$500 to $2,500",
+    "description": " a natural range of size, with a desired size of 23 inches (58 cm) tall and 75 pounds (34 kg) for females, 25 inches (64 cm) tall and 85 pounds (39 kg) for males. Heavier individuals (90 lb (41 kg)) and dogs smaller than 75 pounds (34 kg) are commonly seen. There is often a marked size difference between males and females. Weights upwards of 100 pounds (45 kg) are also seen."
+  }
+]
