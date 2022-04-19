@@ -1,30 +1,3 @@
-:root {
-  --main-color: #4b4b4b;
-  --lin-grad-main: #0090ef;
-  --lin-grad-alt: #005eff;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background: linear-gradient(
-    to bottom right,
-    var(--lin-grad-main),
-    var(--lin-grad-alt)
-  );
-  color: var(--main-color);
-  line-height: 1.7;
-  min-height: 100vh;
-  padding: 5rem 5rem 10rem;
-}
-
-h1 {
-  font-family: "Consolas", "Gill Sans", "Optima", "Verdana", sans-serif;
-  font-size: 6rem;
+  background-color: black;
 }

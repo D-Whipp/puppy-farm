@@ -3,6 +3,7 @@ const url = require("url");
 const fs = require("fs");
 const replaceTemplate = require("./modules/replaceTemplate");
 
+
 // load data and pages on first load
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const dataObj = JSON.parse(data);
