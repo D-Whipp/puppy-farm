@@ -3,8 +3,8 @@ const url = require("url");
 const fs = require("fs");
 const replaceTemplate = require("./modules/replaceTemplate");
 
+// load data and pages on first load
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
-// const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const dataObj = JSON.parse(data);
 const templateOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
@@ -14,7 +14,26 @@ const templateCard = fs.readFileSync(
   `${__dirname}/templates/template-card.html`,
   "utf-8"
 );
-// console.log(data);
+
+// replace data
+// const replaceTemplate = (template, puppyData) => {
+//   let output = template.replace(/%DOGBREED%/g, puppyData.dogBreed);
+//   output = output.replace(/{%IMAGE%}/g, puppyData.image);
+//   output = output.replace(/{%ORIGIN%}/g, puppyData.origin);
+//   output = output.replace(/{%OTHER_NAMES%}/g, puppyData.otherNames);
+//   output = output.replace(/{%TEMPERAMENT%}/g, puppyData.temperament);
+//   output = output.replace(/{%DEMEANOR%}/g, puppyData.demeanor);
+//   output = output.replace(/{%FAMILY_DOG%}/g, puppyData.familyDog);
+//   output = output.replace(/{%COST%}/g, puppyData.cost);
+//   output = output.replace(/{%CARD_DESCRIPTION%}/g, puppyData.description);
+//   output = output.replace(/{%ID%}/g, puppyData.id);
+
+// if (!puppyData.familyDog)
+//   output = output.replace(/{%FAMILY_DOG%}/g, "not a family dog");
+
+//   return output;
+// };
+
 // *** Server ***
 const server = http.createServer((req, res) => {
   const { query, pathname } = url.parse(req.url, true);
@@ -23,16 +42,19 @@ const server = http.createServer((req, res) => {
   if (pathname === "/" || pathname === "/overview") {
     // basic setup to ensure server is running
     res.writeHead(200, {
-      "Content-type": "application/json",
+      // "Content-type": "application/json",
+      "Content-type": "text/html",
     });
 
     const cardsHtml = dataObj
       .map((el) => replaceTemplate(templateCard, el))
       .join("");
-    const output = templateOverview.replace("{%PRODUCT_CARDS%}", cardsHtml);
+    // console.log(cardsHtml);
+    const output = templateOverview.replace("{%PUPPY_CARDS%}", cardsHtml);
     res.end(output);
+    // ***End of Overview***
   } else {
-    // Not Found
+    // ***Start Not Found***
     res.writeHead(404, {
       "Content-type": "text/html",
     });
