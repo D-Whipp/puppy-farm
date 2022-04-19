@@ -6,7 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puppy Farm</title>
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
+    <!-- after review I've determined the quickest way to go about the styles -->
+    <!-- is to include them here in the header, node requires Express for styles -->
+    <!-- there may be a way with css in js (jss) but that would require more study -->
+    <style>
+      /* general styles start */
+      :root {
+        --main-bg: #008cff;
+        --offset-bg: #03009b;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: linear-gradient(
+          to top left,
+          var(--offset-bg),
+          var(--main-bg)
+        );
+        color: #000;
+        line-height: 1.7;
+        min-height: 100vh;
+        max-width: 75vw;
+        padding: 5rem 5rem 10rem;
+      }
+      /* general styles end */
+
+      /* card styles start */
+      .card__image {
+        height: 15rem;
+        width: 20rem;
+      }
+      /* card styles end */
+    </style>
   </head>
   <body>
     <div class="container">
