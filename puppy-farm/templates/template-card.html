@@ -4,15 +4,36 @@
     <h2 class="card__dogBreed">%DOGBREED%</h2>
   </div>
   <div class="card__details">
-    <p class="card__origin">{%ORIGIN%}</p>
-    <p class="card__otherNames">{%OTHER_NAMES%}</p>
-    <p class="card__temperament">{%TEMPERAMENT%}</p>
-    <p class="card__demeanor">{%DEMEANOR%}</p>
+    <p class="card__origin">
+      <span class="detail__identifier">Origin:</span>
+      <span class="identifier__info">{%ORIGIN%}</span>
+    </p>
+    <p class="card__otherNames">
+      <span class="detail__identifier">AKA:</span>
+      <span class="identifier__info">{%OTHER_NAMES%}</span>
+    </p>
+    <p class="card__temperament">
+      <span class="detail__identifier">Temperament:</span>
+      <span class="identifier__info">{%TEMPERAMENT%}</span>
+    </p>
+    <p class="card__demeanor">
+      <span class="detail__identifier">Demeanor</span>
+      <span class="identifier__info">{%DEMEANOR%}</span>
+    </p>
     <p class="card__familyDog">{%FAMILY_DOG%}</p>
-    <p class="card__cost">{%COST%}</p>
-    <p class="card__description">{%CARD_DESCRIPTION%}</p>
+    <p class="card__cost">
+      <span class="detail__identifier">Cost:</span>
+      <span class="identifier__info">{%COST%}</span>
+    </p>
+    <p class="card__description">
+      <span class="detail__identifier">Description: </span>
+      <span class="identifier__info">{%CARD_DESCRIPTION%}</span>
+    </p>
   </div>
-  <a class="card__link" href="/puppy?id={%ID%}">
-    <span>Detail <i class="emoji-right">🦮</i></span>
-  </a>
+  <!-- <a class="card__link" href="/puppy?id={%ID%}">
+    <span><i>🐕</i> Select <i>🦮</i></span>
+  </a> -->
+  <button class="card__link" href="/puppy?id={%ID%}">
+    <i>🐕</i> Select <i>🦮</i>
+  </button>
 </figure>

@@ -12,8 +12,9 @@
     <style>
       /* general styles start */
       :root {
-        --main-bg: #008cff;
-        --offset-bg: #03009b;
+        --main-bg: #66b3f1;
+        --offset-bg: #000a66;
+        --card-bg: #727272;
       }
 
       *,
@@ -25,30 +26,119 @@
       }
 
       body {
-        background: linear-gradient(
+        /* background: linear-gradient(
           to top left,
           var(--offset-bg),
           var(--main-bg)
-        );
+        ); */
+        /* background: linear-gradient(to top left, #000, #fde613); */
+        background: linear-gradient(to top left, #000, #fff);
+        /* background: linear-gradient(to top left, var(--card-bg), #fff); */
         color: #000;
         line-height: 1.7;
         min-height: 100vh;
-        max-width: 75vw;
+        width: 100%;
         padding: 5rem 5rem 10rem;
+        text-align: center;
       }
       /* general styles end */
 
+      /* template-overview styles start */
+      h1 {
+        font-size: 4rem;
+      }
+
+      .gold-color-identifier {
+        color: gold;
+      }
+      /* template-overview styles end */
+
       /* card styles start */
+      .container {
+        display: inline-block;
+        /* display: flex;
+        flex-direction: row; */
+      }
+
+      .card {
+        /* display: inline; */
+        border: 5px solid darkgrey;
+        border-radius: 11px;
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+        /* height: 40rem; */
+        height: 100%;
+        width: 30rem;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: var(--card-bg);
+        background: linear-gradient(to top right, var(--card-bg), #fff);
+        /* box-shadow: 10px -5px 0px darkgrey; */
+        box-shadow: 0px 0px 5px black;
+      }
+
       .card__image {
+        border-radius: 25px;
+        box-shadow: 0px 0px 14px white;
         height: 15rem;
         width: 20rem;
       }
+
+      .card-title {
+        /* background-color: gold; */
+        background-color: var(--card-bg);
+        /* color: white; */
+        color: gold;
+        font-size: 2rem;
+        /* width: 100%; */
+        width: 29rem;
+        /* margin: 0 -5%; */
+        margin: 0 -3%;
+      }
+
+      .card__dogBreed {
+        width: 100%;
+      }
+
+      .card__details {
+        color: white;
+        /* font-weight: 400; */
+      }
+
+      .detail__identifier {
+        font-weight: bold;
+        /* line-height: 1.7; */
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .identifier__info {
+        color: #000;
+      }
+
+      .card__link {
+        margin-top: 1rem;
+        /* padding-top: 2rem; */
+        text-decoration: none;
+        color: gold;
+        font-size: 1.3rem;
+        background-color: #000a66;
+        border-radius: 10px;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .card__link:hover {
+        cursor: pointer;
+      }
+
       /* card styles end */
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>🐕 Puppy Farm 🦮</h1>
+      <h1>🐕 Puppy <span class="gold-color-identifier">Farm</span> 🦮</h1>
       <div class="cards-container">{%PUPPY_CARDS%}</div>
     </div>
   </body>
