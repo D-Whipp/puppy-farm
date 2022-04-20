@@ -3,7 +3,6 @@ const url = require("url");
 const fs = require("fs");
 const replaceTemplate = require("./modules/replaceTemplate");
 
-
 // load data and pages on first load
 const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const dataObj = JSON.parse(data);
@@ -54,6 +53,15 @@ const server = http.createServer((req, res) => {
     const output = templateOverview.replace("{%PUPPY_CARDS%}", cardsHtml);
     res.end(output);
     // ***End of Overview***
+  } else if (pathname === "/puppy") {
+    // Puppy page
+    res.writeHead(200, {
+      "Content-type": "text/html",
+    });
+    const puppy = dataObj[query.id];
+    const output = replaceTemplate(templatePuppy, puppy);
+
+    res.end(output);
   } else {
     // ***Start Not Found***
     res.writeHead(404, {
