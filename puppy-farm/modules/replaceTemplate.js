@@ -17,8 +17,11 @@ module.exports = (template, puppyData) => {
   output = output.replace(/{%CARD_DESCRIPTION%}/g, puppyData.description);
   output = output.replace(/{%ID%}/g, puppyData.id);
 
-  // if (!puppyData.familyDog)
-  //   output = output.replace(/{%FAMILY_DOG%}/g, "not a family dog");
+  if (!puppyData.familyDog)
+    output = output.replace(
+      /{%NOT_FAMILY_FRIENDLY%}/g,
+      "card__not-family-friendly"
+    );
 
   return output;
 };

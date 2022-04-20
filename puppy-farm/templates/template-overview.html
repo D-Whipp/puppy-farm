@@ -76,6 +76,7 @@
         background: linear-gradient(to top right, var(--card-bg), #fff);
         /* box-shadow: 10px -5px 0px darkgrey; */
         box-shadow: 0px 0px 5px black;
+        position: relative;
       }
 
       .card__image {
@@ -83,6 +84,35 @@
         box-shadow: 0px 0px 14px white;
         height: 15rem;
         width: 20rem;
+      }
+
+      .card__family-friendly {
+        color: gold;
+        /* font-size: 1.7rem; */
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        /* color: var(--main-bg); */
+        /* color: white; */
+        /* background-color: black; */
+        /* background-color: white; */
+        background-color: var(--card-bg);
+        /* border-radius: 10px; */
+        border-radius: 8px;
+        /* color: black; */
+        font-weight: bolder;
+        /* position: fixed; */
+        /* position: relative; */
+        position: absolute;
+        /* top: 0; */
+        top: -1px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        /* transform: rotate(-45deg); */
+      }
+
+      .card__not-family-friendly {
+        display: none;
       }
 
       .card-title {
