@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puppy Farm</title>
 
-    <!-- after review I've determined the quickest way to go about the styles -->
-    <!-- is to include them here in the header, node requires Express for styles -->
-    <!-- there may be a way with css in js (jss) but that would require more study -->
     <style>
       /* general styles start */
       :root {
@@ -26,14 +23,7 @@
       }
 
       body {
-        /* background: linear-gradient(
-          to top left,
-          var(--offset-bg),
-          var(--main-bg)
-        ); */
-        /* background: linear-gradient(to top left, #000, #fde613); */
         background: linear-gradient(to top left, #000, #fff);
-        /* background: linear-gradient(to top left, var(--card-bg), #fff); */
         color: #000;
         line-height: 1.7;
         min-height: 100vh;
@@ -56,8 +46,6 @@
       /* card styles start */
       .container {
         display: inline-block;
-        /* display: flex;
-        flex-direction: row; */
       }
 
       .card {

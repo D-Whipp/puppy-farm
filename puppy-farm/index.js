@@ -10,6 +10,10 @@ const templateOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
   "utf-8"
 );
+const templatePuppy = fs.readFileSync(
+  `${__dirname}/templates/template-puppy.html`,
+  "utf-8"
+);
 const templateCard = fs.readFileSync(
   `${__dirname}/templates/template-card.html`,
   "utf-8"
@@ -62,6 +66,10 @@ const server = http.createServer((req, res) => {
     const output = replaceTemplate(templatePuppy, puppy);
 
     res.end(output);
+  } else if (pathname === "/api") {
+    // API page
+    res.writeHead(200, { "Content-type": "application/json" });
+    res.end(data);
   } else {
     // ***Start Not Found***
     res.writeHead(404, {

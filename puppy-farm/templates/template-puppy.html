@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐕 Puppy Farm 🦮 | 🐕 {%DOGBREED%} 🦮</title>
+    <style>
+      /* general styles start */
+      :root {
+        --main-bg: #66b3f1;
+        --offset-bg: #000a66;
+        --card-bg: #727272;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        /* background: linear-gradient(
+          to top left,
+          var(--offset-bg),
+          var(--main-bg)
+        ); */
+        /* background: linear-gradient(to top left, #000, #fde613); */
+        background: linear-gradient(to top left, #000, #fff);
+        /* background: linear-gradient(to top left, var(--card-bg), #fff); */
+        color: #000;
+        line-height: 1.7;
+        min-height: 100vh;
+        width: 100%;
+        padding: 5rem 5rem 10rem;
+        text-align: center;
+      }
+      /* general styles end */
+      /* card styles start */
+      h1 {
+        font-size: 4rem;
+      }
+
+      .gold-color-identifier {
+        color: gold;
+      }
+
+      .container {
+        display: inline-block;
+        /* display: flex;
+        flex-direction: row; */
+      }
+
+      .card {
+        /* display: inline; */
+        border: 5px solid darkgrey;
+        border-radius: 11px;
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+        /* height: 40rem; */
+        height: 100%;
+        width: 30rem;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: var(--card-bg);
+        background: linear-gradient(to top right, var(--card-bg), #fff);
+        /* box-shadow: 10px -5px 0px darkgrey; */
+        box-shadow: 0px 0px 5px black;
+        position: relative;
+      }
+
+      .card__image {
+        border-radius: 25px;
+        box-shadow: 0px 0px 14px white;
+        height: 15rem;
+        width: 20rem;
+      }
+
+      .card__family-friendly {
+        color: gold;
+        /* font-size: 1.7rem; */
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        /* color: var(--main-bg); */
+        /* color: white; */
+        /* background-color: black; */
+        /* background-color: white; */
+        background-color: var(--card-bg);
+        /* border-radius: 10px; */
+        border-radius: 8px;
+        /* color: black; */
+        font-weight: bolder;
+        /* position: fixed; */
+        /* position: relative; */
+        position: absolute;
+        /* top: 0; */
+        top: -1px;
+        /* top: 27%; */
+        /* top: 50%; */
+        /* top: 60%; */
+        /* top: 50%; */
+        left: 50%;
+        transform: translate(-50%);
+        /* width: 100%; */
+        width: 50%;
+        /* transform: rotate(-45deg); */
+      }
+
+      .card__not-family-friendly {
+        display: none;
+      }
+
+      .card-title {
+        /* background-color: gold; */
+        background-color: var(--card-bg);
+        /* color: white; */
+        color: gold;
+        font-size: 2rem;
+        /* width: 100%; */
+        width: 29rem;
+        /* margin: 0 -5%; */
+        margin: 0 -3%;
+      }
+
+      .card__dogBreed {
+        width: 100%;
+      }
+
+      .card__details {
+        /* color: white; */
+        color: gold;
+        /* font-weight: 400; */
+      }
+
+      .detail__identifier {
+        font-weight: bold;
+        /* line-height: 1.7; */
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .identifier__info {
+        /* color: #000;  */
+        /* color: white; */
+        color: #eee;
+      }
+
+      .card__description {
+        margin-bottom: 1rem;
+      }
+
+      .card__link {
+        /* margin-top: -1rem; */
+        /* padding-top: 2rem; */
+        text-decoration: none;
+        color: gold;
+        font-size: 1.3rem;
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 0.5rem 0.75rem;
+        box-shadow: 5px 5px black;
+      }
+
+      .card__link:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px black;
+      }
+
+      /* card styles end */
+    </style>
+    <script type="text/javascript" src="../index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <figure class="card">
+        <img class="card__image" src="{%IMAGE%}" alt="image of dog" />
+        <div class="card__family-friendly {%NOT_FAMILY_FRIENDLY%}">
+          Family Friendly
+        </div>
+        <div class="card-title">
+          <h2 id="dogBreed" class="card__dogBreed">%DOGBREED%</h2>
+        </div>
+        <div class="card__details">
+          <p class="card__origin">
+            <span class="detail__identifier">Origin:</span>
+            <span class="identifier__info">{%ORIGIN%}</span>
+          </p>
+          <p class="card__otherNames">
+            <span class="detail__identifier">AKA:</span>
+            <span class="identifier__info">{%OTHER_NAMES%}</span>
+          </p>
+          <p class="card__temperament">
+            <span class="detail__identifier">Temperament:</span>
+            <span class="identifier__info">{%TEMPERAMENT%}</span>
+          </p>
+          <p class="card__demeanor">
+            <span class="detail__identifier">Demeanor</span>
+            <span class="identifier__info">{%DEMEANOR%}</span>
+          </p>
+          <!-- <p class="card__familyDog">{%FAMILY_DOG%}</p> -->
+          <p class="card__cost">
+            <span class="detail__identifier">Cost:</span>
+            <span class="identifier__info">{%COST%}</span>
+          </p>
+          <p class="card__description">
+            <span class="detail__identifier">Description: </span>
+            <span class="identifier__info">{%CARD_DESCRIPTION%}</span>
+          </p>
+        </div>
+        <!-- <a class="card__link" href="/puppy?id={%ID%}">
+          <span><i>🐕</i> Select <i>🦮</i></span>
+        </a> -->
+        <!-- <a class="card__link" href="https://en.wikipedia.org/wiki/{%DOG_URL%}">
+          <span><i>🐕</i> Wiki <i>🦮</i></span>
+        </a> -->
+        <!-- <a
+          class="card__link"
+          href="https://en.wikipedia.org/wiki/"
+          onclick="location.href=this.href+dogBreedToUrl;"
+        >
+          <span><i>🐕</i> JS Wiki <i>🦮</i></span>
+        </a> -->
+        <script type="text/javascript">
+          //   const data = fs.readFileSync(
+          //     `${__dirname}/../dev-data/data.json`,
+          //     "utf-8"
+          //   );
+          //   const dataObj = JSON.parse(data);
+          //   dataObj = document.get;
+          //   console.log(dataObj);
+          let dogBreed = document.getElementById("dogBreed").innerHTML;
+          let dogBreedToLowerCase = dogBreed.toLowerCase();
+          let dogBreedToArray = dogBreedToLowerCase.split(" ");
+          let dogBreedToUrl = dogBreedToArray[0] + "_" + dogBreedToArray[1];
+          console.log(dogBreedToUrl);
+          const wikiUrl = "https://en.wikipedia.org/wiki/";
+          // document.getElementById("")
+          //   let output = template.repl;
+          document.write(
+            '<a class="card__link" href="' +
+              wikiUrl +
+              dogBreedToUrl +
+              '">🐕 Wiki 🦮</a>'
+          );
+        </script>
+      </figure>
+    </div>
+    <!-- <script type="text/javascript">
+      //   const data = fs.readFileSync(
+      //     `${__dirname}/../dev-data/data.json`,
+      //     "utf-8"
+      //   );
+      //   const dataObj = JSON.parse(data);
+      //   dataObj = document.get;
+      //   console.log(dataObj);
+      let dogBreed = document.getElementById("dogBreed").innerHTML;
+      let dogBreedToLowerCase = dogBreed.toLowerCase();
+      let dogBreedToArray = dogBreedToLowerCase.split(" ");
+      let dogBreedToUrl = dogBreedToArray[0] + "_" + dogBreedToArray[1];
+      console.log(dogBreedToUrl);
+      // document.getElementById("")
+      //   let output = template.repl;
+      console.log(dogBreedToUrl);
+    </script> -->
+  </body>
+</html>

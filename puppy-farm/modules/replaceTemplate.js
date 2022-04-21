@@ -1,10 +1,3 @@
-// module.exports = (template, dog) => {
-//   let output = template.replace(/{%DOGBREED%}/g, dog.dogBreed);
-//   output = output.replace(/{%IMAGE%}/g, dog.image);
-//   output = output.replace(/{%PRICE%}/g, dog.cost);
-//   output = output.replace(/{%FROM%}/g, dog.origin);
-// };
-
 module.exports = (template, puppyData) => {
   let output = template.replace(/%DOGBREED%/g, puppyData.dogBreed);
   output = output.replace(/{%IMAGE%}/g, puppyData.image);
