@@ -1,6 +1,6 @@
 # Puppy Farm
 ### Back End Web App
-![app-screenshot](./assets/images/puppy-farm-screenshot.png)
+![app-screenshot](./puppy-farm/assets/images/puppy-farm-screenshot.png)
 
 ## Description
 
