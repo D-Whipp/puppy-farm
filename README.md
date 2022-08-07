@@ -22,6 +22,7 @@ I made Puppy Farm after completing the first section of a [Udemy](https://www.ud
 
 - Download the source code to use this app.
 - Using your terminal, navigate to Puppy Farm's root directory.
+- Run 'npm i' to install dependencies
 - Run 'Node Index.js'
 - Open your browser of choice.
 - Type 'localhost:5500' into the URL and press 'Enter'.
